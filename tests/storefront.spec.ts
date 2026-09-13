@@ -25,7 +25,7 @@ test("static menu and direct social contact on desktop and mobile", async ({
   await contactStack.getByRole("button", { name: "Show photo 1 of 3" }).click();
   await expect(
     contactStack.getByRole("img", {
-      name: "Homemade Filipino ensaymada from Cloud Bun Bakery",
+      name: "Cloud Bun Bakery order collage with bakery boxes, pandesal, scones, and customers",
     }),
   ).toBeVisible();
   await expect(
