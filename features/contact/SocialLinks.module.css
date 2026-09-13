@@ -1,0 +1,38 @@
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 24px 0;
+}
+.links a {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 18px;
+  background: var(--green);
+  color: white;
+  border: 1px solid var(--green);
+  border-radius: 4px;
+  font-size: 13px;
+}
+.links a:last-child {
+  background: transparent;
+  color: var(--green);
+}
+.links a:hover {
+  background: #284634;
+  color: white;
+}
+.links svg {
+  flex-shrink: 0;
+}
+@media (max-width: 450px) {
+  .links {
+    flex-direction: column;
+  }
+  .links a {
+    width: 100%;
+  }
+}

@@ -1,0 +1,23 @@
+.section {
+  min-height: 440px;
+  max-width: 620px;
+  margin: auto;
+  text-align: center;
+  padding: 75px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+.section > span {
+  font-size: 12px;
+  color: var(--rose);
+}
+.section h1 {
+  font-size: 40px;
+}
+.section p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.8;
+}

@@ -1,0 +1,246 @@
+.hero {
+  height: 570px;
+  position: relative;
+  overflow: hidden;
+  background: #687662;
+  color: white;
+}
+.photo {
+  position: absolute;
+  inset: 0;
+  background-image: url("/images/bakes.jpg");
+  background-size: 174% auto;
+  background-position: 50% 47%;
+}
+.shade {
+  position: absolute;
+  inset: 0;
+  background: #17271c45;
+}
+.content {
+  position: relative;
+  max-width: 1240px;
+  margin: auto;
+  padding: 58px 0;
+  z-index: 1;
+}
+.eyebrow {
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-weight: 600;
+}
+.content h1 {
+  font-size: 72px;
+  line-height: 0.99;
+  margin: 22px 0;
+  text-shadow: 0 2px 14px #18271d40;
+}
+.content h1 > span {
+  display: block;
+  font-style: italic;
+  color: #ffeadc;
+  font-size: 29px;
+  line-height: 1.2;
+  margin-top: 17px;
+}
+.content p {
+  font-size: 14px;
+  line-height: 1.8;
+  text-shadow: 0 1px 7px #18271d;
+}
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 28px;
+  background: #fffdf5;
+  color: var(--ink);
+  padding: 14px 25px;
+  border-radius: 3px;
+  font-size: 13px;
+  margin-top: 26px;
+}
+.cta:hover {
+  background: var(--pink);
+}
+.signature {
+  font-family: Georgia, serif;
+  display: block;
+  font-style: italic;
+  margin-top: 18px;
+  font-size: 12px;
+}
+.seal {
+  position: absolute;
+  top: 43px;
+  right: max(40px, calc((100% - 1240px) / 2));
+  border: 1px solid #f4e1c5;
+  outline: 1px solid #f4e1c588;
+  outline-offset: 5px;
+  background: #f9eedcec;
+  color: var(--green);
+  height: 122px;
+  width: 122px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  transform: rotate(9deg);
+}
+.seal span {
+  text-align: center;
+  font-size: 9px;
+  line-height: 1.5;
+}
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 40px;
+  font-size: 9px;
+  border-top: 1px solid #ffffff45;
+  background: #20302330;
+}
+.promise {
+  background: var(--sage);
+  display: flex;
+  justify-content: center;
+  gap: 55px;
+  padding: 22px 24px;
+  font-size: 12px;
+}
+.promise > span,
+.promise > a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.promise svg {
+  color: #647c5a;
+}
+.welcome {
+  text-align: center;
+  padding: 65px 24px 0;
+}
+.welcome > span {
+  color: var(--rose);
+  font-size: 10px;
+}
+.welcome h2 {
+  font-size: 40px;
+  margin: 18px 0;
+}
+.welcome p {
+  color: var(--muted);
+  font-size: 14px;
+}
+.welcome > a {
+  margin-top: 18px;
+}
+@media (min-width: 1700px) {
+  .photo {
+    background-size: 174% auto;
+  }
+  .hero {
+    height: 630px;
+  }
+  .content {
+    padding-top: 80px;
+  }
+}
+@media (max-width: 1320px) {
+  .content {
+    padding-left: 40px;
+  }
+  .promise {
+    gap: 28px;
+  }
+}
+@media (max-width: 900px) {
+  .promise {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 35px;
+  }
+  .content h1 {
+    font-size: 65px;
+  }
+  .photo {
+    background-size: auto 180%;
+  }
+  .seal {
+    right: 35px;
+  }
+}
+@media (max-width: 540px) {
+  .hero {
+    height: 550px;
+  }
+  .photo {
+    background-size: auto 175%;
+    background-position: 53% 46%;
+  }
+  .shade {
+    background: #17271c65;
+  }
+  .content {
+    padding: 57px 24px;
+  }
+  .content h1 {
+    font-size: 58px;
+  }
+  .content h1 > span {
+    font-size: 25px;
+  }
+  .seal {
+    width: 80px;
+    height: 80px;
+    right: 21px;
+    top: 25px;
+  }
+  .seal span {
+    font-size: 6px;
+  }
+  .seal svg {
+    width: 15px;
+    height: 15px;
+  }
+  .caption {
+    padding: 12px 24px;
+    font-size: 8px;
+  }
+  .caption > span {
+    display: none;
+  }
+  .promise {
+    font-size: 10px;
+    gap: 18px 12px;
+    padding: 22px 16px;
+  }
+  .promise > span,
+  .promise > a {
+    gap: 7px;
+  }
+  .promise svg {
+    width: 19px;
+    flex-shrink: 0;
+  }
+  .promise > a > svg:last-child {
+    display: none;
+  }
+  .welcome {
+    padding-top: 45px;
+  }
+  .welcome h2 {
+    font-size: 31px;
+  }
+  .welcome p {
+    font-size: 13px;
+  }
+}

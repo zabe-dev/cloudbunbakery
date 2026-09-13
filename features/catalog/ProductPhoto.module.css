@@ -1,0 +1,54 @@
+.photo {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-image: url("/images/menu.jpg");
+  background-repeat: no-repeat;
+  background-color: #f9f1e9;
+}
+/* Viewports isolate the product photographs in the client-supplied menu without altering the source asset. */
+.classic {
+  background-size: 372.36% 558.55%;
+  background-position: 4.67% 28.87%;
+}
+.ube {
+  background-size: 372.36% 558.55%;
+  background-position: 5.2% 52.58%;
+}
+.bread {
+  background-size: 487.62% 731.43%;
+  background-position: 6.51% 72.55%;
+}
+.crinkles {
+  background-size: 568.89% 853.33%;
+  background-position: 7.7% 87.1%;
+}
+.muffins {
+  background-size: 412.9% 619.35%;
+  background-position: 68.3% 29.9%;
+}
+.pandesal {
+  background-size: 426.67% 640%;
+  background-position: 67.6% 51.47%;
+}
+.cinnamon {
+  background-size: 487.62% 731.43%;
+  background-position: 66.83% 72.77%;
+}
+.scones {
+  background-size: 568.89% 853.33%;
+  background-position: 65.52% 87.39%;
+}
+
+/* Direct product photography from the supplied media library. */
+.classic,
+.ube,
+.crinkles,
+.scones {
+  background-size: cover;
+  background-position: center;
+}
+.classic { background-image: url("/images/bakery/topped-ensaymada.webp"); }
+.ube { background-image: url("/images/bakery/ube-ensaymada.webp"); }
+.crinkles { background-image: url("/images/bakery/chocolate-crinkles.webp"); }
+.scones { background-image: url("/images/bakery/blueberry-scones.webp"); }
