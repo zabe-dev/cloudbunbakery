@@ -13,8 +13,8 @@ const photos = [
     alt: "Homemade Filipino ensaymada from Cloud Bun Bakery",
   },
   {
-    src: "/images/contact/fresh-bakes-kentucky-home-bakery.webp",
-    alt: "Fresh bakes from a Kentucky home bakery",
+    src: "/images/contact/kentucky-filipino-bakery-pickup-collage.webp",
+    alt: "Cloud Bun Bakery pickup collage with Filipino breads, bakery boxes, and ensaymada",
   },
 ];
 
