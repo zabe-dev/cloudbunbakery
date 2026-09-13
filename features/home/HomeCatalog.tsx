@@ -10,7 +10,7 @@ const collections = [
     alt: "Assorted ensaymada with sweet toppings",
     description:
       "Buttery brioche, a little sweetness, and a topping to make it yours. Meet our classic and ube ensaymada.",
-    label: "Explore ensaymada",
+    label: "Craving ensaymada?",
     filter: "Ensaymada",
   },
   {
@@ -19,7 +19,7 @@ const collections = [
     image: "golden-bread-rolls",
     alt: "Fresh golden bread rolls",
     description: "Pandesal & Spanish bread. Best shared over a slow morning.",
-    label: "Explore breads",
+    label: "Fresh bread, anyone?",
     filter: "Breads",
   },
   {
@@ -28,7 +28,7 @@ const collections = [
     image: "chocolate-crinkles",
     alt: "Sugar-dusted chocolate crinkles",
     description: "Cookies, cakes & scones for your just-one-more moments.",
-    label: "Explore sweet bakes",
+    label: "Something sweet?",
     filter: "Sweet bakes",
   },
 ];

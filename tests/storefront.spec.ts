@@ -114,7 +114,7 @@ test("static menu and direct social contact on desktop and mobile", async ({
   ).toBeVisible();
   await expect(page.locator('a[href^="/products/"]')).toHaveCount(0);
   await page.goto("/");
-  await page.getByRole("link", { name: /Explore ensaymada/ }).click();
+  await page.getByRole("link", { name: /Craving ensaymada\?/ }).click();
   const favorites = page.locator("#menu");
   await expect(
     favorites.getByRole("button", { name: "Ensaymada", exact: true }),
@@ -135,7 +135,7 @@ test("static menu and direct social contact on desktop and mobile", async ({
     .getByRole("button", { name: "Sweet bakes", exact: true })
     .click();
   await expect(favorites.locator("details")).toHaveCount(5);
-  await page.getByRole("link", { name: /Explore ensaymada/ }).click();
+  await page.getByRole("link", { name: /Craving ensaymada\?/ }).click();
   await expect(favorites.locator("details")).toHaveCount(2);
   await favorites
     .getByRole("button", { name: "All bakes", exact: true })
