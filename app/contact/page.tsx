@@ -3,8 +3,8 @@ import { SocialLinks } from "@/features/contact/SocialLinks";
 import { pageMetadata } from "@/lib/metadata";
 import styles from "@/features/contact/Contact.module.css";
 export const metadata = pageMetadata(
-  "Contact & Ordering",
-  "Contact Cloud Bun Bakery LLC on Instagram or Facebook for fresh Filipino bakes, availability, and pickup arrangements.",
+  "Contact & Kentucky Pickup",
+  "Contact Cloud Bun Bakery LLC on Instagram or Facebook for fresh Filipino bakes, availability, and Kentucky pickup arrangements.",
   "/contact/",
 );
 const faqs = [

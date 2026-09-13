@@ -2,7 +2,7 @@
   width: 100%;
   aspect-ratio: 1;
   border-radius: 50%;
-  background-image: url("/images/menu.jpg");
+  background-image: url("/images/menu.webp");
   background-repeat: no-repeat;
   background-color: #f9f1e9;
 }
@@ -48,7 +48,15 @@
   background-size: cover;
   background-position: center;
 }
-.classic { background-image: url("/images/bakery/topped-ensaymada.webp"); }
-.ube { background-image: url("/images/bakery/ube-ensaymada.webp"); }
-.crinkles { background-image: url("/images/bakery/chocolate-crinkles.webp"); }
-.scones { background-image: url("/images/bakery/blueberry-scones.webp"); }
+.classic {
+  background-image: url("/images/bakery/topped-ensaymada.webp");
+}
+.ube {
+  background-image: url("/images/bakery/ube-ensaymada.webp");
+}
+.crinkles {
+  background-image: url("/images/bakery/chocolate-crinkles.webp");
+}
+.scones {
+  background-image: url("/images/bakery/blueberry-scones.webp");
+}

@@ -55,7 +55,7 @@
 }
 .storyPhoto {
   min-height: 535px;
-  background: url("/images/bakes.jpg") 50% 45% / 174% auto;
+  background: url("/images/bakes.webp") 50% 45% / 174% auto;
 }
 .storyCopy {
   max-width: 620px;
@@ -164,22 +164,22 @@
   opacity: 1;
 }
 .bakes {
-  background-image: url("/images/bakes.jpg");
+  background-image: url("/images/bakes.webp");
   background-size: 174% auto;
   background-position: center;
 }
 .bread {
-  background-image: url("/images/bakes.jpg");
+  background-image: url("/images/bakes.webp");
   background-size: 520% auto;
   background-position: 0.4% 25.8%;
 }
 .boxes {
-  background-image: url("/images/community.jpg");
+  background-image: url("/images/community.webp");
   background-size: 310% auto;
   background-position: 2% 55%;
 }
 .scones {
-  background-image: url("/images/bakes.jpg");
+  background-image: url("/images/bakes.webp");
   background-size: 550% auto;
   background-position: 50% 98%;
 }

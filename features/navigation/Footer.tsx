@@ -1,4 +1,5 @@
 import { SocialIcon } from "@/components/ui/SocialIcon";
+import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/lib/site";
 export function Footer() {
@@ -6,8 +7,17 @@ export function Footer() {
     <footer className="editorial-footer">
       <div className="frame footer-grid">
         <div>
-          <Link className="wordmark" href="/">
-            Cloud Bun<span>BAKERY</span>
+          <Link
+            className="logo-link footer-logo"
+            href="/"
+            aria-label="Cloud Bun Bakery home"
+          >
+            <Image
+              src="/logo-horizontal.webp"
+              alt="Cloud Bun Bakery"
+              width={480}
+              height={186}
+            />
           </Link>
           <p>
             Homemade Filipino favorites.

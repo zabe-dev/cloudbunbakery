@@ -8,7 +8,7 @@
 .photo {
   position: absolute;
   inset: 0;
-  background-image: url("/images/bakes.jpg");
+  background-image: url("/images/bakes.webp");
   background-size: 174% auto;
   background-position: 50% 47%;
 }

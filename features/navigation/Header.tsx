@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 export function Header() {
@@ -34,11 +35,17 @@ export function Header() {
             ))}
           </nav>
           <Link
-            className="wordmark"
+            className="logo-link nav-logo"
             href="/"
             aria-label="Cloud Bun Bakery home"
           >
-            Cloud Bun<span>BAKERY</span>
+            <Image
+              src="/logo-horizontal.webp"
+              alt="Cloud Bun Bakery"
+              width={480}
+              height={186}
+              priority
+            />
           </Link>
           <nav className="nav-right" aria-label="Order navigation">
             {links.slice(3).map(([href, label]) => (

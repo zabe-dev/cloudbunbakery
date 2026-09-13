@@ -24,8 +24,8 @@ The build generates `out/`, which can be served by a static host. `npm start` se
 
 - Menu descriptions, prices, pack sizes, and toppings: `features/catalog/data/products.ts`.
 - Facebook, Instagram, and the eventual public domain: `lib/site.ts`.
-- Logo: `public/images/logo.jpg`, copied from the latest client attachment.
-- Photos: optimized, descriptively named WebP assets in `public/images/bakery/`, selected from `media/`. Originals are preserved; `media/asset-manifest.json` maps published files to sources, dimensions, and video timestamps. Video close-ups are served as stills to avoid autoplay downloads. Related flavors share reference imagery; products without a matching photo retain menu imagery.
+- Logo and social cards: optimized 256px assets in `public/`.
+- Photos: optimized, descriptively named WebP assets in `public/images/`, selected from `media/`. Originals are preserved in `media/`; published assets are resized to their page purpose. Video close-ups are served as stills to avoid autoplay downloads. Related flavors share reference imagery; products without a matching photo retain menu imagery.
 - Page layouts and scoped CSS Modules: `features/`.
 - Formatting helpers: `helpers/`.
 - Base resets and theme tokens only: `app/globals.css`.

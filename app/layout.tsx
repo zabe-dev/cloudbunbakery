@@ -5,12 +5,41 @@ import { site } from "@/lib/site";
 import "./globals.css";
 export const metadata: Metadata = {
   title: {
-    default: "Cloud Bun Bakery LLC | Homemade Filipino Bakes",
-    template: "%s | Cloud Bun Bakery LLC",
+    default: "Kentucky Filipino Home Bakery | Cloud Bun Bakery",
+    template: "%s | Cloud Bun Bakery",
   },
   description: site.description,
+  keywords: site.keywords,
   ...(site.url ? { metadataBase: new URL(site.url) } : {}),
-  icons: { icon: "/images/logo.jpg", apple: "/images/logo.jpg" },
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
+  openGraph: {
+    title: "Kentucky Filipino Home Bakery | Cloud Bun Bakery",
+    description: site.description,
+    siteName: site.name,
+    type: "website",
+    locale: "en_US",
+    images: [
+      {
+        url: "/logo-256x256.png",
+        width: 256,
+        height: 256,
+        alt: `${site.name} logo`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "Kentucky Filipino Home Bakery | Cloud Bun Bakery",
+    description: site.description,
+    images: [{ url: "/logo-256x256.png", alt: `${site.name} logo` }],
+  },
 };
 export default function RootLayout({
   children,

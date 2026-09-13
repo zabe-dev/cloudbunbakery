@@ -6,29 +6,45 @@ export function pageMetadata(
   path: string,
 ): Metadata {
   const url = site.url ? new URL(path, site.url).toString() : undefined;
+  const fullTitle = `${title} | Cloud Bun Bakery`;
+  const imageUrl = site.url
+    ? new URL("/logo-256x256.png", site.url).toString()
+    : "/logo-256x256.png";
   return {
-    title,
+    title: { absolute: fullTitle },
     description,
+    keywords: site.keywords,
     ...(url ? { alternates: { canonical: url } } : {}),
     openGraph: {
-      title: `${title} | ${site.name}`,
+      title: fullTitle,
       description,
       siteName: site.name,
       type: "website",
+      locale: "en_US",
+      images: [
+        {
+          url: imageUrl,
+          width: 256,
+          height: 256,
+          alt: `${site.name} logo`,
+        },
+      ],
       ...(url
         ? {
             url,
-            images: [
-              {
-                url: new URL("/images/logo.jpg", site.url).toString(),
-                width: 1254,
-                height: 1254,
-                alt: site.name,
-              },
-            ],
           }
         : {}),
     },
-    twitter: { card: "summary", title, description },
+    twitter: {
+      card: "summary",
+      title: fullTitle,
+      description,
+      images: [
+        {
+          url: imageUrl,
+          alt: `${site.name} logo`,
+        },
+      ],
+    },
   };
 }

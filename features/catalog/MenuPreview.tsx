@@ -46,7 +46,7 @@ export function MenuPreview({
           </header>
           <div className={styles.content}>
             <Image
-              src="/images/menu.jpg"
+              src="/images/menu.webp"
               alt="Cloud Bun Bakery original menu with products, prices, and box sizes"
               width={1024}
               height={1536}

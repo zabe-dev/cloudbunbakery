@@ -17,8 +17,16 @@ test("static menu and direct social contact on desktop and mobile", async ({
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
     "Freshly baked.",
   );
+  const contactStack = page.locator(".contact-photo-stack");
+  await expect(contactStack).toBeVisible();
   await expect(
-    page.getByRole("img", { name: "Cloud Bun Bakery LLC logo" }).first(),
+    contactStack.getByRole("button", { name: "Show photo 1 of 3" }),
+  ).toBeVisible();
+  await contactStack.getByRole("button", { name: "Show photo 1 of 3" }).click();
+  await expect(
+    contactStack.getByRole("img", {
+      name: "Homemade Filipino ensaymada from Cloud Bun Bakery",
+    }),
   ).toBeVisible();
   await expect(
     page.getByRole("link", { name: "[ Place an Order ]", exact: true }),
@@ -38,6 +46,7 @@ test("static menu and direct social contact on desktop and mobile", async ({
       )
       .toBeGreaterThan(0);
   }
+  await expect(page.locator(".instagram-grid a")).toHaveCount(10);
   await page.evaluate(() => window.scrollTo(0, 0));
   await page.screenshot({
     path: testInfo.outputPath("home.png"),

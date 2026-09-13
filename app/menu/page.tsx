@@ -4,8 +4,8 @@ import { MenuCollection } from "@/features/catalog/MenuCollection";
 import { products } from "@/features/catalog/data/products";
 import { pageMetadata } from "@/lib/metadata";
 export const metadata = pageMetadata(
-  "Bakery Menu",
-  "Explore Cloud Bun Bakery's ensaymada, pandesal, Spanish bread, cookies, muffins, and scones. Message us on social media to arrange your order.",
+  "Kentucky Bakery Menu",
+  "Explore Cloud Bun Bakery's Kentucky menu of Filipino ensaymada, pandesal, Spanish bread, cookies, muffins, and scones. Message us to arrange local pickup.",
   "/menu/",
 );
 export default function MenuPage() {

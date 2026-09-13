@@ -5,11 +5,12 @@ import Link from "next/link";
 import { Reveal } from "@/features/home/Reveal";
 import { HomeCatalog } from "@/features/home/HomeCatalog";
 import { FavoritesMenu } from "@/features/home/FavoritesMenu";
+import { ContactPhotoStack } from "@/features/home/ContactPhotoStack";
 import { site } from "@/lib/site";
 import { pageMetadata } from "@/lib/metadata";
 export const metadata = pageMetadata(
-  "Freshly Baked. Made with Heart.",
-  site.description,
+  "Homestyle Filipino Bakery in Kentucky",
+  "Homemade Filipino favorites baked with heart in Kentucky. Ensaymada, pandesal, Spanish bread, crinkles & scones. Order your box for pickup today.",
   "/",
 );
 const Button = ({
@@ -63,6 +64,18 @@ export default function Home() {
             "@type": "Bakery",
             name: site.name,
             description: site.description,
+            keywords: site.keywords.join(", "),
+            image: "/logo-256x256.png",
+            address: {
+              "@type": "PostalAddress",
+              addressRegion: "KY",
+              addressCountry: "US",
+            },
+            areaServed: {
+              "@type": "State",
+              name: "Kentucky",
+            },
+            servesCuisine: ["Filipino", "Bakery"],
             sameAs: [site.instagram, site.facebook],
           }).replace(/</g, "\\u003c"),
         }}
@@ -78,12 +91,15 @@ export default function Home() {
         />
         <div className="hero-overlay" />
         <div className="frame hero-copy">
-          <span className="eyebrow">HOMEMADE FILIPINO FAVORITES</span>
+          <span className="eyebrow">KENTUCKY FILIPINO HOME BAKERY</span>
           <h1>
             <span>Freshly baked.</span>
             <span>Made with heart.</span>
           </h1>
-          <p>A little taste of home. A little moment of joy.</p>
+          <p>
+            Fresh ensaymada, pandesal, and Filipino bakery boxes for local
+            pickup.
+          </p>
           <div className="button-row">
             <MenuPreview label="View Menu" light />
             <Button href="#pickup" light>
@@ -114,8 +130,8 @@ export default function Home() {
               brings everyone to the table.
             </p>
             <p>
-              At Cloud Bun, we make Filipino favorites with care — from our home
-              kitchen to your happiest moments.
+              At Cloud Bun, we make Filipino favorites with care in Kentucky —
+              from our home kitchen to your happiest moments.
             </p>
             <div className="button-row">
               <MenuPreview label="See Full Menu" />
@@ -134,10 +150,11 @@ export default function Home() {
         aria-label="Ensaymada, pandesal, Spanish bread, crinkles, muffins, scones"
       >
         <div aria-hidden="true">
-          {[0, 1].map((i) => (
+          {[0, 1, 2, 3].map((i) => (
             <span key={i}>
-              ENSAYMADA · PANDESAL · SPANISH BREAD · CHOCOLATE CRINKLES · BANANA
-              MUFFINS · SCONES ·{" "}
+              KENTUCKY HOME BAKERY · ENSAYMADA · PANDESAL · SPANISH BREAD ·
+              CHOCOLATE CRINKLES · BANANA MUFFINS · SCONES · FILIPINO BAKES
+              ·{" "}
             </span>
           ))}
         </div>
@@ -158,7 +175,7 @@ export default function Home() {
             </h2>
             <p>
               Every box starts with a little planning. Please place your order
-              at least three days before your preferred pickup date.
+              at least three days before your preferred Kentucky pickup date.
             </p>
             <ol className="process-steps">
               {[
@@ -168,7 +185,7 @@ export default function Home() {
                 ],
                 [
                   "Send us a message",
-                  "Tell us your bakes, quantities, and preferred pickup date on Instagram or Facebook.",
+                  "Tell us your bakes, quantities, and preferred Kentucky pickup date on Instagram or Facebook.",
                 ],
                 [
                   "Pick up. Share. Enjoy.",
@@ -216,8 +233,8 @@ export default function Home() {
             </h2>
             <p>
               Family get-togethers, office coffee breaks, or a weekend with
-              friends. Bring a box of familiar favorites and make a little room
-              for joy.
+              friends in Kentucky. Bring a box of familiar Filipino favorites
+              and make a little room for joy.
             </p>
             <Button href="#contact">Order a Box to Share</Button>
           </article>
@@ -289,30 +306,50 @@ export default function Home() {
             </a>
           </div>
           <div className="instagram-grid">
-            {["ensaymada", "bread", "boxes", "scones", "shared"].map(
-              (kind, i) => (
-                <a
-                  href={site.instagram}
-                  target="_blank"
-                  rel="noreferrer"
-                  key={kind}
-                  aria-label={`View Cloud Bun bakery photo ${i + 1} on Instagram`}
-                >
-                  <Photo
-                    kind={kind}
-                    label={
-                      [
-                        "Topped ensaymada",
-                        "Fresh bread",
-                        "Bakery boxes",
-                        "Fresh scones",
-                        "Chocolate crinkles ready to share",
-                      ][i]
-                    }
-                  />
-                </a>
-              ),
-            )}
+            {[
+              "ensaymada",
+              "bread",
+              "boxes",
+              "scones",
+              "shared",
+              "ensaymada",
+              "bread",
+              "boxes",
+              "scones",
+              "shared",
+            ].map((kind, i) => (
+              <a
+                href={site.instagram}
+                target="_blank"
+                rel="noreferrer"
+                key={`${kind}-${i}`}
+                aria-hidden={i > 4 ? "true" : undefined}
+                tabIndex={i > 4 ? -1 : undefined}
+                aria-label={
+                  i > 4
+                    ? undefined
+                    : `View Cloud Bun Kentucky bakery photo ${i + 1} on Instagram`
+                }
+              >
+                <Photo
+                  kind={kind}
+                  label={
+                    [
+                      "Topped ensaymada",
+                      "Fresh pandesal and bread",
+                      "Bakery boxes",
+                      "Fresh scones",
+                      "Chocolate crinkles ready to share",
+                      "Topped ensaymada",
+                      "Fresh pandesal and bread",
+                      "Bakery boxes",
+                      "Fresh scones",
+                      "Chocolate crinkles ready to share",
+                    ][i]
+                  }
+                />
+              </a>
+            ))}
           </div>
         </div>
       </section>
@@ -330,13 +367,13 @@ export default function Home() {
               <p>
                 Cloud Bun Bakery, LLC
                 <br />
-                Pickup location and time confirmed with your order.
+                Kentucky pickup location and time confirmed with your order.
               </p>
             </div>
             <div className="contact-detail">
               <span className="eyebrow">PLAN AHEAD</span>
               <p>
-                Please allow at least 3 days before pickup.
+                Please allow at least 3 days before Kentucky pickup.
                 <br />
                 Orders are subject to availability.
               </p>
@@ -364,15 +401,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="brand-panel">
-            <Image
-              src="/images/logo.jpg"
-              alt="Cloud Bun Bakery LLC logo"
-              width={600}
-              height={600}
-            />
-            <span>FRESHLY BAKED. MADE WITH HEART.</span>
-          </div>
+          <ContactPhotoStack />
         </Reveal>
       </section>
     </>

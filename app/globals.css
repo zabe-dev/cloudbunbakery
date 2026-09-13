@@ -226,24 +226,27 @@ summary:focus-visible {
 .nav-right a:hover {
   color: white;
 }
-.wordmark {
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 29px;
-  letter-spacing: 1px;
-  font-style: italic;
-  line-height: 1.2;
-  text-align: center;
-  display: inline-block;
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
-.wordmark span {
+.logo-link img {
   display: block;
-  font:
-    9px Inter,
-    Arial,
-    sans-serif;
-  letter-spacing: 5px;
-  padding-left: 5px;
-  margin-top: 7px;
+  height: auto;
+}
+.nav-logo {
+  grid-column: 2;
+}
+.nav-logo img {
+  width: 148px;
+  height: auto;
+  object-fit: contain;
+}
+.footer-logo img {
+  width: 178px;
+  height: auto;
+  object-fit: contain;
 }
 .nav-toggle {
   display: none;
@@ -252,9 +255,8 @@ summary:focus-visible {
   display: none;
 }
 .editorial-hero {
-  min-height: 680px;
-  height: calc(90svh - 88px);
-  max-height: 920px;
+  min-height: calc(100svh - 88px);
+  height: calc(100svh - 88px);
   position: relative;
   display: flex;
   align-items: flex-end;
@@ -374,14 +376,15 @@ summary:focus-visible {
 .ticker > div {
   display: flex;
   width: max-content;
-  animation: marquee 35s linear infinite;
+  animation: marquee 42s linear infinite;
 }
 .ticker span {
+  flex: 0 0 auto;
   font-size: 10px;
   letter-spacing: 3px;
   color: #94775e;
   white-space: pre;
-  padding-right: 20px;
+  padding-right: 42px;
 }
 .section-header {
   display: flex;
@@ -615,6 +618,9 @@ summary:focus-visible {
   grid-template-columns: repeat(5, 1fr);
   gap: 12px;
 }
+.instagram-grid > a:nth-child(n + 6) {
+  display: none;
+}
 .instagram-section .section-header {
   margin-bottom: 27px;
   align-items: center;
@@ -636,23 +642,47 @@ summary:focus-visible {
 .contact-detail .button-row {
   margin-top: 24px;
 }
-.brand-panel {
-  background: #fcf5ed;
-  padding: 26px;
+.contact-photo-stack {
+  position: relative;
+  min-height: 620px;
+  overflow: hidden;
   text-align: center;
 }
-.brand-panel img {
-  mix-blend-mode: multiply;
+.contact-card {
+  position: absolute;
+  left: 50%;
+  top: 42px;
+  width: min(78%, 450px);
+  aspect-ratio: 1;
+  padding: 0;
+  border: 1px solid #fcf5ed;
+  background: #fffaf2;
+  box-shadow: 0 24px 55px #2a1c1021;
+  overflow: hidden;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+.contact-card img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
 }
-.brand-panel > span {
-  display: block;
-  font-size: 8px;
-  letter-spacing: 2.5px;
-  color: #94775e;
-  margin: 18px 0;
+.contact-card-0 {
+  z-index: 4;
+  transform: translateX(-50%) rotate(-1deg);
+}
+.contact-card-1 {
+  z-index: 3;
+  transform: translateX(-42%) translateY(34px) rotate(5deg);
+}
+.contact-card-2 {
+  z-index: 2;
+  transform: translateX(-58%) translateY(68px) rotate(-7deg);
+}
+.contact-card:hover {
+  box-shadow: 0 30px 65px #2a1c1030;
 }
 .editorial-footer {
   background: #2a190e;
@@ -663,9 +693,6 @@ summary:focus-visible {
   display: grid;
   grid-template-columns: 1.1fr 0.7fr 1.2fr;
   gap: 70px;
-}
-.editorial-footer .wordmark {
-  font-size: 31px;
 }
 .editorial-footer .eyebrow {
   font-size: 9px;
@@ -789,9 +816,12 @@ summary:focus-visible {
   .nav-right {
     display: none;
   }
-  .wordmark {
+  .nav-logo {
     grid-column: 2;
-    font-size: 26px;
+  }
+  .nav-logo img {
+    width: 126px;
+    height: auto;
   }
   .nav-toggle {
     display: flex;
@@ -816,9 +846,8 @@ summary:focus-visible {
     letter-spacing: 2px;
   }
   .editorial-hero {
-    height: calc(91svh - 76px);
-    min-height: 610px;
-    max-height: 850px;
+    height: calc(100svh - 76px);
+    min-height: calc(100svh - 76px);
   }
   .hero-copy {
     padding-bottom: 103px;
@@ -954,20 +983,33 @@ summary:focus-visible {
     font-size: 9px;
   }
   .instagram-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
+    display: flex;
+    gap: 10px;
+    width: max-content;
+    animation: kitchen-carousel 28s linear infinite;
   }
-  .instagram-grid > a:nth-child(n + 4) {
-    display: none;
+  .instagram-grid > a {
+    display: block;
+    width: min(72vw, 270px);
+    flex: 0 0 auto;
+  }
+  .instagram-section .frame {
+    overflow: hidden;
   }
   .instagram-section .section-header > .eyebrow {
     max-width: 160px;
     font-size: 8px;
     letter-spacing: 1.5px;
   }
-  .brand-panel {
-    max-width: 480px;
+  .contact-photo-stack {
+    width: min(100%, 480px);
+    min-height: 440px;
     margin: auto;
+    padding: 18px;
+  }
+  .contact-card {
+    top: 28px;
+    width: min(76%, 310px);
   }
   .contact-detail .button-row {
     gap: 10px;
@@ -1000,6 +1042,15 @@ summary:focus-visible {
   }
   .ticker > div {
     animation: none;
+  }
+  .instagram-grid {
+    animation: none;
+  }
+}
+
+@keyframes kitchen-carousel {
+  to {
+    transform: translateX(calc(-50% - 5px));
   }
 }
 
