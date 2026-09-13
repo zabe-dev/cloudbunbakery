@@ -655,7 +655,7 @@ summary:focus-visible {
   width: min(78%, 450px);
   aspect-ratio: 1;
   padding: 0;
-  border: 1px solid #fcf5ed;
+  border: 8px solid #fcf5ed;
   background: #fffaf2;
   box-shadow: 0 24px 55px #2a1c1021;
   overflow: hidden;

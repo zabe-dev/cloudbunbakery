@@ -5,16 +5,16 @@ import Image from "next/image";
 
 const photos = [
   {
-    src: "/images/contact/kentucky-filipino-bakery-box.webp",
-    alt: "Fresh Cloud Bun Bakery box for Kentucky pickup",
+    src: "/images/contact/cloud-bun-bakery-pickup-collage.webp",
+    alt: "Cloud Bun Bakery pickup collage with Spanish bread, boxed bakes, and ensaymada",
   },
   {
-    src: "/images/contact/homemade-filipino-ensaymada.webp",
-    alt: "Homemade Filipino ensaymada from Cloud Bun Bakery",
+    src: "/images/contact/cloud-bun-bakery-order-collage.webp",
+    alt: "Cloud Bun Bakery order collage with bakery boxes, pandesal, scones, and customers",
   },
   {
-    src: "/images/contact/kentucky-filipino-bakery-pickup-collage.webp",
-    alt: "Cloud Bun Bakery pickup collage with Filipino breads, bakery boxes, and ensaymada",
+    src: "/images/contact/cloud-bun-bakery-customer-collage.webp",
+    alt: "Cloud Bun Bakery customer pickup collage with Filipino breads, scones, and bakery boxes",
   },
 ];
 
