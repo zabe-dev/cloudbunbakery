@@ -657,11 +657,8 @@ summary:focus-visible {
   padding: 0;
   border: 8px solid #fcf5ed;
   background: #fffaf2;
-  box-shadow: 0 24px 55px #2a1c1021;
   overflow: hidden;
-  transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease;
+  transition: transform 0.35s ease;
 }
 .contact-card img {
   display: block;
@@ -680,9 +677,6 @@ summary:focus-visible {
 .contact-card-2 {
   z-index: 2;
   transform: translateX(-58%) translateY(68px) rotate(-7deg);
-}
-.contact-card:hover {
-  box-shadow: 0 30px 65px #2a1c1030;
 }
 .editorial-footer {
   background: #2a190e;
